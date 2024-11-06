@@ -1,0 +1,106 @@
+/* Общие стили для шрифта */
+body {
+    font-family: 'Roboto', sans-serif; /* Современный шрифт, более читаемый */
+    background-color: #121212; 
+    color: #e2e2e2;
+    line-height: 1.8; /* Увеличиваем межстрочный интервал */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Хедер */
+header {
+    background-color: #1e2a30; /* Темный изумрудный цвет */
+    color: #a3d39c; /* Светлый оттенок изумрудного */
+    padding: 30px 20px; /* Уменьшаем отступы сверху и снизу */
+    text-align: center;
+    border-bottom: 5px solid #a3d39c;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 2.2em; /* Размер заголовка уменьшен */
+    margin: 0;
+    color: #a3d39c;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Легкая тень для текста */
+}
+
+header p {
+    font-size: 1.1em; /* Уменьшаем размер шрифта */
+    color: #c1c1c1;
+    margin-top: 10px;
+}
+
+/* Основной контент */
+main {
+    padding: 30px;
+    padding-bottom: 80px;
+    flex: 1;
+    max-width: 1200px; /* Ограничиваем ширину контента */
+    margin: 0 auto; /* Центрируем контент */
+}
+
+/* Заголовки глав */
+main h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #a3d39c;
+    text-align: center;
+}
+
+/* Абзацы в тексте */
+main p {
+    font-size: 1.1em; /* Размер шрифта для текста */
+    line-height: 1.8; /* Увеличиваем межстрочный интервал */
+    text-align: justify; /* Выравнивание текста по ширине */
+    margin-bottom: 20px; /* Отступы между абзацами */
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #1e2a30;
+    width: 100%;
+    border-top: 5px solid #a3d39c;
+    color: #a0a0a0;
+    font-size: 1.1em;
+    margin-top: auto;
+}
+
+/* Кнопки футера */
+footer .btn {
+    background-color: #a3d39c;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+footer .btn:hover {
+    transform: scale(1.1);
+    background-color: #6ea041;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Контейнер для кнопок */
+.buttons-container {
+    margin-bottom: 15px;
+}
+
+/* Контейнер для хедера */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

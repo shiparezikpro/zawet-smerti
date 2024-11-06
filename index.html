@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="top-banner"></div> 
+
+    <header>
+        <h1>Добро пожаловать!</h1>
+        <p>Автор: Отец (shiparezik)</p>
+    </header>
+
+    <main>
+        <div class="content">
+            <section class="left-column">
+                <h2>О авторе</h2>
+                <p>Меня зовут Данил, мне 15 лет(скоро 16), и я живу в городе Лодзь, в Польше. В настоящее время я учусь на втором курсе техникума, осваивая профессию программиста. Помимо учебы, я занимаюсь плаванием, но настоящее мое увлечение — это писательство. Я стараюсь в каждой истории раскрывать миры, которые волнуют меня, и надеюсь, что вам понравится моя книга.</p>
+            </section>
+
+            <section class="right-column">
+                <h2>О книге</h2>
+                <p>«Завет смерти» — это история о мире, который пережил катастрофу. Когда метеорит столкнулся с Землей, он принес не только разрушение, но и неизвестную угрозу. Цивилизация пала, а люди были вынуждены адаптироваться к новым, жестоким условиям. Города стали заброшенными, а на земле появились чудовища, ставшие главным врагом выживших. Книга погружает читателя в этот опасный и жестокий мир, где каждый шаг может стать последним.</p>
+                <img src="./img/крысаглав.jpg" alt="Обложка книги" class="book-cover-modal"><br>
+                <button class="btn" onclick="openModal()">Выбрать главу</button>
+            </section>
+
+            <section class="gallery-section">
+                <h2>Галерея</h2>
+                <p class="gallery-text">спасибо вам большое за ваши работы, я их очень сильно ценю</p>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="./img/крысауля.jpg" alt="Изображение 1" class="gallery-image">
+                        <p class="gallery-text">Уля-@rlldshka</p> <!-- Текст под изображением -->
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/крысамакака.jpg" alt="Изображение 2" class="gallery-image">
+                        <p class="gallery-text">Макака-@Monkey_Brains</p> <!-- Текст под изображением -->
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/крысамиу.jpg" alt="Изображение 3" class="gallery-image">
+                        <p class="gallery-text"> Миу-@miu_www</p> <!-- Текст под изображением -->
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./img/крысалов.jpg" alt="Изображение 4" class="gallery-image">
+                        <p class="gallery-text">Love cats-@Coffeesaurusss</p> <!-- Текст под изображением -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        </div>
+    </main>
+
+    <footer>
+        <div class="buttons-container">
+        </div>
+        <p class="footer-text">&copy; 2024 Все права защищены Отцом</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Выберите главу</h2>
+            <button onclick="goToChapter('./chapter/chapter1.html')">Глава 1</button>
+            <button onclick="goToChapter('./chapter/chapter2.html')">Глава 2</button>
+        </div>
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>

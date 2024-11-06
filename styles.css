@@ -1,0 +1,309 @@
+/* Общие стили страницы */
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #121212; /* Темный фон */
+    color: #e2e2e2; /* Цвет текста */
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1e2a30; /* Темный изумрудный цвет */
+    color: #a3d39c; /* Светлый оттенок изумрудного */
+    text-align: center;
+    border-bottom: 5px solid #a3d39c;
+    width: 100%;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 2.5em; /* Уменьшенный размер шрифта */
+    margin: 0;
+    color: #a3d39c;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.1em;
+    color: #c1c1c1;
+    margin: 10px 0;
+}
+
+main {
+    padding: 30px;
+    padding-bottom: 80px;
+    flex: 1;
+}
+
+/* Контейнер для контента с двумя колонками */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Левая колонка - О авторе */
+.left-column {
+    background-color: #1e2a30; /* Более темный фон для блока об авторе */
+    color: #dcdcdc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.left-column h2 {
+    color: #a3d39c;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.left-column p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Правая колонка - О книге */
+.right-column {
+    background-color: #1e2a30; /* Темный изумрудный фон для книги */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.right-column h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.right-column p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.book-cover {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.book-cover-modal {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #a3d39c;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #6ea041;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.start-btn {
+    background-color: #6ea041;
+    font-size: 1.2em;
+}
+
+.gallery-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Заголовок галереи */
+.gallery-section h2 {
+    font-size: 2.2em;
+    color: #a3d39c;
+    margin-bottom: 20px;
+}
+
+/* Контейнер для изображений */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Обеспечивает перенос элементов, если они не помещаются в одну строку */
+}
+
+/* Элемент галереи */
+.gallery-item {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует контент */
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Изображения в галерее */
+.gallery-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover; /* Обрезает изображение, сохраняя его пропорции */
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на изображение */
+.gallery-image:hover {
+    transform: scale(1.1); /* Немного увеличиваем изображение */
+}
+
+/* Текст под изображением */
+.gallery-text {
+    font-size: 1em;
+    color: #a3d39c;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+/* Кнопка перехода в галерею */
+.gallery-btn {
+    margin-top: 20px;
+    background-color: #a3d39c;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффект на кнопке галереи при наведении */
+.gallery-btn:hover {
+    transform: scale(1.1);
+    background-color: #6ea041;
+}
+
+footer {
+    text-align: center;
+    background-color: #1e2a30;
+    width: 100%;
+    border-top: 5px solid #a3d39c;
+    color: #a0a0a0;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+.buttons-container {
+    margin-bottom: 20px;
+}
+
+.top-banner {
+    background: linear-gradient(90deg, #1e2a30, #a3d39c, #1e2a30);
+    height: 8px;
+    width: 100%;
+    margin: 0;
+}
+
+.chapter-selection {
+    background-color: #1e2a30;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chapter-selection a {
+    background-color: #a3d39c;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chapter-selection a:hover {
+    background-color: #6ea041;
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #2e3b42;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal h2 {
+    text-align: center;
+    color: #a3d39c;
+    font-size: 1.8em;
+}
+
+.modal button {
+    background-color: #a3d39c;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #6ea041;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
