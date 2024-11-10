@@ -1,4 +1,3 @@
-/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -7,17 +6,16 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #1b1f23; /* Темный фон для страницы */
-    color: #e0e5e9; /* Цвет текста */
+    background-color: #1b1f23; 
+    color: #e0e5e9;
     line-height: 1.6;
     overflow-x: hidden;
-    animation: fadeIn 1s ease-out; /* Анимация для загрузки страницы */
+    animation: fadeIn 1s ease-out; 
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Минимальная высота страницы — 100% высоты окна браузера */
+    min-height: 100vh;
 }
 
-/* Анимация появления страницы */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -27,14 +25,13 @@ body {
     }
 }
 
-/* Стиль хедера */
 header {
     position: relative;
     background-color: #1b1f23;
-    color: #7fffd4; /* Основной акцентный цвет */
+    color: #7fffd4;
     padding: 20px;
     text-align: center;
-    background-image: url('./img/фон.png'); /* Путь к изображению */
+    background-image: url('./img/фон.png');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -53,7 +50,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Затемнение фона */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -73,7 +70,6 @@ header p {
     animation: textAppear 1.6s ease-out;
 }
 
-/* Анимация текста */
 @keyframes textAppear {
     0% {
         opacity: 0;
@@ -85,23 +81,21 @@ header p {
     }
 }
 
-/* Основной контент */
 main {
-    background: url('./img/фон.png') no-repeat center center/cover; /* Установите путь к фону */
+    background: url('./img/фон.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Высота основного блока */
+    height: 80vh; 
     text-align: center;
     position: relative;
-    color: #e0f7fa; /* Цвет текста */
+    color: #e0f7fa; 
     animation: fadeInMain 1s ease-out;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Анимация появления основного блока */
 @keyframes fadeInMain {
     0% {
         opacity: 0;
@@ -111,7 +105,6 @@ main {
     }
 }
 
-/* Контейнер для текста */
 .main-text {
     z-index: 2;
     max-width: 80%;
@@ -121,38 +114,37 @@ main {
     animation: textAppear 1.3s ease-out;
 }
 
-/* Кнопка */
 .button-container {
     margin-top: 20px;
 }
 
 button {
-    background-color: #7fffd4; /* Цвет кнопки */
-    color: #1b1f23; /* Цвет текста на кнопке */
+    background-color: #7fffd4; 
+    color: #1b1f23;
     padding: 15px 25px;
     border: none;
-    border-radius: 15px; /* Округленные углы */
+    border-radius: 15px;
     cursor: pointer;
     font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    width: 200px; /* Ширина кнопки */
-    margin: 0 auto; /* Центрируем кнопку */
+    width: 200px; 
+    margin: 0 auto; 
+    font-family: 'Oswald', sans-serif;
 }
 
 button:hover {
-    background-color: #6ccfbd; /* Цвет кнопки при наведении */
-    transform: scale(1.1); /* Увеличение при наведении */
+    background-color: #6ccfbd; 
+    transform: scale(1.1);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    
 }
 
-/* Прозрачный фон на кнопку */
 button:focus {
     outline: none;
 }
 
-/* Footer */
 footer {
     text-align: center;
     background-color: #243238;
@@ -163,7 +155,6 @@ footer {
     margin-top: auto;
 }
 
-/* Галерея */
 .gallery-section {
     text-align: center;
     padding: 20px 0;
@@ -208,7 +199,7 @@ footer {
     margin: 10px 0;
 }
 
-/* Для мобильных устройств */
+
 @media screen and (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -229,6 +220,6 @@ footer {
 
     .gallery-item {
         width: 100%;
-        height: 250px; /* Для мобильных устройств увеличиваем высоту */
+        height: 250px;
     }
 }

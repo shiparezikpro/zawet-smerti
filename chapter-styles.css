@@ -1,4 +1,3 @@
-/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +6,14 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #1b1f23; /* Темный фон для страницы */
-    color: #e0e5e9; /* Цвет текста */
+    background-color: #1b1f23;
+    color: #e0e5e9;
     line-height: 1.6;
     overflow-x: hidden;
-    animation: fadeIn 1s ease-out; /* Анимация для загрузки страницы */
+    animation: fadeIn 1s ease-out;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Минимальная высота страницы — 100% высоты окна браузера */
+    min-height: 100vh;
 }
 
 @keyframes fadeIn {
@@ -29,10 +28,10 @@ body {
 header {
     position: relative;
     background-color: #1b1f23;
-    color: #7fffd4; /* Основной акцентный цвет */
+    color: #7fffd4;
     padding: 20px;
     text-align: center;
-    background-image: url('./img/фон.png'); /* Путь к изображению */
+    background-image: url('./img/фон.png');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -51,7 +50,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Легкое затемнение */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -95,8 +94,6 @@ header p {
 }
 
 
-
-/* Основной контейнер для текста и контента */
 main {
     padding: 40px;
     background-color: #1a2428;
@@ -107,7 +104,6 @@ main {
     animation: fadeInMain 1s ease-out;
 }
 
-/* Анимация для основного контента */
 @keyframes fadeInMain {
     0% {
         opacity: 0;
@@ -117,7 +113,6 @@ main {
     }
 }
 
-/* Заголовки и абзацы в контенте */
 main h2 {
     font-size: 2.5em;
     color: #7fffd4;
@@ -133,9 +128,9 @@ main p {
     margin-bottom: 20px;
 }
 
-/* Стиль кнопок */
 .btn {
     background-color: #7fffd4;
+    gap: 10px;
     color: #333;
     font-size: 1.2em;
     padding: 15px 30px;
@@ -144,16 +139,15 @@ main p {
     display: inline-block;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    font-family: 'Oswald', sans-serif;
 }
 
 .btn:hover {
     transform: scale(1.05);
-    background-color: #66c9a1; /* Сделано темнее */
+    background-color: #66c9a1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
-    colo
 }
 
-/* Галерея */
 .gallery-section {
     text-align: center;
     padding: 20px 0;
@@ -198,7 +192,6 @@ main p {
     margin: 10px 0;
 }
 
-/* Footer */
 footer {
     text-align: center;
     background-color: #243238;
@@ -209,7 +202,6 @@ footer {
     margin-top: auto;
 }
 
-/* Модальное окно */
 .modal {
     display: none;
     position: fixed;

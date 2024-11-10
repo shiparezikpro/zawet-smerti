@@ -1,8 +1,8 @@
-/* Основные стили */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
 
 body {
@@ -21,10 +21,9 @@ body {
     to { opacity: 1; }
 }
 
-/* Стиль заголовка с фоновым изображением */
 header {
     position: relative;
-    background-image: url('./img/фон.png'); /* Укажите путь к вашему изображению */
+    background-image: url('./img/фон.png');
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -43,7 +42,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Легкое затемнение */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -86,13 +85,11 @@ header p {
     }
 }
 
-/* Основной контейнер для текста и галереи */
 main {
     padding: 40px;
     flex: 1;
 }
 
-/* Левая и правая колонки */
 .left-column, .right-column {
     background-color: #243238;
     color: #dcdcdc;
@@ -126,7 +123,6 @@ main {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Кнопки */
 .btn {
     background-color: #7fffd4;
     color: #333;
@@ -137,15 +133,15 @@ main {
     display: inline-block;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    font-family: 'Oswald', sans-serif;
 }
 
 .btn:hover {
     transform: scale(1.05);
-    background-color: #66c9a1; /* Сделано темнее */
+    background-color: #66c9a1; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
-/* Галерея */
 .gallery-section {
     text-align: center;
     padding: 20px 0;
@@ -190,7 +186,6 @@ main {
     margin: 10px 0;
 }
 
-/* Footer */
 footer {
     text-align: center;
     background-color: #243238;
@@ -201,7 +196,6 @@ footer {
     margin-top: auto;
 }
 
-/* Модальное окно */
 .modal {
     display: none;
     position: fixed;
@@ -209,9 +203,10 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 30px;
+    padding: 40px 20px; 
     border-radius: 10px;
-    width: 50%;
+    width: 30%; 
+    height: auto; 
     z-index: 10;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
     animation: fadeInModal 0.3s ease-out;
@@ -233,6 +228,9 @@ footer {
     padding: 20px;
     color: #e0e5e9;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modal-content h2 {
@@ -246,7 +244,7 @@ footer {
     color: #333;
     font-size: 1.2em;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 10px;
     transition: background-color 0.3s ease;
 }
