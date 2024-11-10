@@ -1,106 +1,277 @@
-/* Общие стили для шрифта */
-body {
-    font-family: 'Roboto', sans-serif; /* Современный шрифт, более читаемый */
-    background-color: #121212; 
-    color: #e2e2e2;
-    line-height: 1.8; /* Увеличиваем межстрочный интервал */
+/* Общие стили */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-/* Хедер */
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #1b1f23; /* Темный фон для страницы */
+    color: #e0e5e9; /* Цвет текста */
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-out; /* Анимация для загрузки страницы */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота страницы — 100% высоты окна браузера */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 header {
-    background-color: #1e2a30; /* Темный изумрудный цвет */
-    color: #a3d39c; /* Светлый оттенок изумрудного */
-    padding: 30px 20px; /* Уменьшаем отступы сверху и снизу */
+    position: relative;
+    background-color: #1b1f23;
+    color: #7fffd4; /* Основной акцентный цвет */
+    padding: 20px;
     text-align: center;
-    border-bottom: 5px solid #a3d39c;
-    margin: 0;
+    background-image: url('./img/фон.png'); /* Путь к изображению */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slideIn 1s ease-out;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Легкое затемнение */
+    z-index: 1;
 }
 
 header h1 {
-    font-size: 2.2em; /* Размер заголовка уменьшен */
+    position: relative;
+    font-size: 3.5em;
+    color: #e0f7fa;
     margin: 0;
-    color: #a3d39c;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Легкая тень для текста */
+    z-index: 2;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideInTitle 1.2s ease-out forwards;
 }
 
 header p {
-    font-size: 1.1em; /* Уменьшаем размер шрифта */
-    color: #c1c1c1;
+    position: relative;
+    font-size: 1.3em;
+    color: #e0e5e9;
+    z-index: 2;
     margin-top: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInSubtitle 1.2s ease-out 0.7s forwards;
+    position: absolute;
+    bottom: 10px;
 }
 
-/* Основной контент */
+@keyframes slideInTitle {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSubtitle {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Основной контейнер для текста и контента */
 main {
-    padding: 30px;
-    padding-bottom: 80px;
-    flex: 1;
-    max-width: 1200px; /* Ограничиваем ширину контента */
-    margin: 0 auto; /* Центрируем контент */
+    padding: 40px;
+    background-color: #1a2428;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInMain 1s ease-out;
 }
 
-/* Заголовки глав */
+/* Анимация для основного контента */
+@keyframes fadeInMain {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Заголовки и абзацы в контенте */
 main h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #a3d39c;
+    font-size: 2.5em;
+    color: #7fffd4;
+    margin-bottom: 10px;
     text-align: center;
+    animation: textAppear 1.2s ease-out;
 }
 
-/* Абзацы в тексте */
 main p {
-    font-size: 1.1em; /* Размер шрифта для текста */
-    line-height: 1.8; /* Увеличиваем межстрочный интервал */
-    text-align: justify; /* Выравнивание текста по ширине */
-    margin-bottom: 20px; /* Отступы между абзацами */
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #dcdcdc;
+    margin-bottom: 20px;
 }
 
-/* Футер */
+/* Стиль кнопок */
+.btn {
+    background-color: #7fffd4;
+    color: #333;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #66c9a1; /* Сделано темнее */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    colo
+}
+
+/* Галерея */
+.gallery-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.gallery-section h2 {
+    font-size: 2.2em;
+    color: #7fffd4;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    background-color: #2e3b42;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.gallery-text {
+    font-size: 1em;
+    color: #7fffd4;
+    margin: 10px 0;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 15px 0;
-    background-color: #1e2a30;
-    width: 100%;
-    border-top: 5px solid #a3d39c;
+    background-color: #243238;
+    padding: 20px;
+    border-top: 5px solid #7fffd4;
     color: #a0a0a0;
-    font-size: 1.1em;
+    font-size: 0.9em;
     margin-top: auto;
 }
 
-/* Кнопки футера */
-footer .btn {
-    background-color: #a3d39c;
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    z-index: 10;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+    animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    background-color: #2e3b42;
+    border-radius: 10px;
+    padding: 20px;
+    color: #e0e5e9;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #7fffd4;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    background-color: #7fffd4;
     color: white;
     font-size: 1.2em;
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
+    padding: 10px 20px;
     margin: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-footer .btn:hover {
-    transform: scale(1.1);
-    background-color: #6ea041;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+.modal-content button:hover {
+    background-color: #66c9a1;
 }
 
-/* Контейнер для кнопок */
-.buttons-container {
-    margin-bottom: 15px;
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #e0e5e9;
+    font-size: 2em;
+    cursor: pointer;
 }
 
-/* Контейнер для хедера */
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.close:hover {
+    color: #7fffd4;
 }

@@ -9,3 +9,4 @@ function closeModal() {
 function goToChapter(chapter) {
     window.location.href = chapter;
 }
+

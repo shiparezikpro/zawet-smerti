@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +12,10 @@
 
     <header>
         <h1>Добро пожаловать!</h1>
-        <p>Автор: Отец (shiparezik)</p>
+        <br><p>Автор: Отец (shiparezik)</p><br>
+        <a href="https://t.me/your_channel" target="_blank">
+            <div class="telegram-icon"></div>
+        </a>
     </header>
 
     <main>
@@ -33,22 +37,15 @@
                 <p class="gallery-text">спасибо вам большое за ваши работы, я их очень сильно ценю</p>
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="./img/крысауля.jpg" alt="Изображение 1" class="gallery-image">
-                        <p class="gallery-text">Уля-@rlldshka</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./img/крысамакака.jpg" alt="Изображение 2" class="gallery-image">
+                        <img src="./img/волкмакака.jpg" alt="Изображение 2" class="gallery-image">
                         <p class="gallery-text">Макака-@Monkey_Brains</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="./img/крысамиу.jpg" alt="Изображение 3" class="gallery-image">
-                        <p class="gallery-text"> Миу-@miu_www</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./img/крысалов.jpg" alt="Изображение 4" class="gallery-image">
+                        <img src="./img/тигрлов.jpg" alt="Изображение 4" class="gallery-image">
                         <p class="gallery-text">Love cats-@Coffeesaurusss</p>
                     </div>
                 </div>
+                <br><a href="gallery.html" class="btn">Перейти в галерею</a><br>
             </section>
         </main>
         </div>
@@ -66,8 +63,10 @@
             <h2>Выберите главу</h2>
             <button onclick="goToChapter('chapter1.html')">Глава 1</button>
             <button onclick="goToChapter('chapter2.html')">Глава 2</button>
+            <button onclick="goToChapter('chapter3.html')">Глава 3</button>
         </div>
     </div>
+    
  <script src="script.js"></script>
 </body>
 </html>
